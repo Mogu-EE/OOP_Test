@@ -3,31 +3,29 @@
 
 # include "Cylinder.h"
 
+double pi = M_PI;
+
 double Cylinder :: SurfaceArea(){
-    
-    return ;
+    return 2*radius*pi*height + 2*pi*radius*radius;
 }
-
 double Cylinder :: Volume(){
-
-    return ;
+    return pi*radius*radius*height;
 }
 
 double Cylinder :: Circumference(){
-
-    return ;
+    return 2*pi*radius;
 }
 
 istream & operator>>(istream & in, Cylinder & cldr)
 {
-
-    return ;
+    in >> cldr.radius >> cldr.height;
+    return in;
 }
 
 ostream & operator<<(ostream & out, Cylinder & cldr)
 {
-    
-    return ;
+    out << cldr.radius << " " << cldr.height << std::endl;
+    return out;
 }
 
 # endif
